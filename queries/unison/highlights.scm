@@ -22,7 +22,7 @@
   (where)
 ] @keyword
 
-(kw_equals) @operator
+(kw_equals) @keyword.operator
 
 (structural) @keyword.modifier
 
