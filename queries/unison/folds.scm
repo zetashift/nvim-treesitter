@@ -1,7 +1,7 @@
 [
   (fold)
   (type_declaration)
-  ;(term_definition)
+  (term_declaration)
   (literal_list)
   (exp_if)
   (pattern)
