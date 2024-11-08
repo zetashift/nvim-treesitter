@@ -59,8 +59,9 @@
 
 (type_name) @type
 
-;(type_declaration
-;  (regular_identifier) @type)
+(type_declaration
+  (regular_identifier) @type)
+
 (ability_name
   (path)? @module
   (regular_identifier) @type)
