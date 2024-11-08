@@ -30,6 +30,9 @@
 
 (type_constructor) @constructor
 
+((doc_block) @comment.documentation
+  (#set! priority 90))
+
 [
   (operator)
   (pipe)
