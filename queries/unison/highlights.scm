@@ -13,6 +13,7 @@
 
 ; Keywords
 (type_kw) @keyword.type
+
 [
   (kw_forall)
   (do)
@@ -24,6 +25,7 @@
 (kw_equals) @operator
 
 (structural) @keyword.modifier
+
 (unique) @keyword.modifier
 
 (type_constructor) @constructor
@@ -50,34 +52,36 @@
 
 (use_clause) @keyword.import
 
-
 ; Types
 (record_field
   (field_name) @variable.member
   type: (regular_identifier) @type)
 
 (type_name) @type
+
 ;(type_declaration
 ;  (regular_identifier) @type)
+(ability_name
+  (path)? @module
+  (regular_identifier) @type)
 
-(ability_name (path)? @module (regular_identifier) @type)
 (ability_declaration
   (ability_name) @type
   (type_argument) @variable.parameter)
+
 (constructor
   (constructor_name) @constructor)
+
 (constructor
   type: (regular_identifier) @type)
 
 (effect
   (regular_identifier) @attribute) ; NOTE: an effect is a special type
 
-
 ; Namespaces
 (path) @module
 
 (namespace) @module
-
 
 ; Terms
 (type_signature
@@ -91,11 +95,12 @@
 
 (term_definition
   name: (path) @module)
+
 (term_definition
   name: (regular_identifier) @variable)
+
 (term_definition
   param: (regular_identifier) @variable.parameter)
-
 
 ; Punctuation
 [
@@ -113,4 +118,5 @@
 ] @punctuation.bracket
 
 (watch_expression) @label
+
 (test_watch_expression) @label
